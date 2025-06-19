@@ -48,6 +48,7 @@ a {
     transition: var(--transition);
     border: none;
     cursor: pointer;
+    border: 1px solid var(--primary);
 }
 
 .btn:hover {
@@ -58,7 +59,7 @@ a {
 
 .btn-outline {
     background-color: transparent;
-    border: 2px solid var(--primary);
+    border: 1px solid var(--primary);
     color: var(--primary);
 }
 
