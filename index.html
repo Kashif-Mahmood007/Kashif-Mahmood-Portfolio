@@ -778,6 +778,20 @@
                 </div>
 
 
+                <!-- PipeSense item  -->
+
+                <div class="portfolio-item" data-category="store">
+                    <img src="images/pipesense/1.png" alt="">
+                    <div class="portfolio-info">
+                        <h3>PipeSense - Machine Learning Solution</h3>
+                        <p>Developed a machine learning regression model to predict gas and water pipe conditions with 97.4% accuracy, enabling proactive maintenance through advanced feature engineering and robust pipelines...</p>
+                        <div class="portfolio-links">
+                            <a href="#" class=" case-study-btn" data-project="pipesense"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+
                 <!-- Easy Startups item  -->
 
                 <div class="portfolio-item" data-category="store">
@@ -943,6 +957,67 @@
             </div>
         </div>
     
+
+
+        <!-- PipeSense Case Study -->
+
+         <div id="pipesense-template">
+            <div class="case-study-banner">
+                <img src="images/pipesense/main.png" alt="PipeSense Banner">
+            </div>
+            <div class="case-study-details">
+                <div class="case-study-header">
+                    <h2>PipeSense - A Machine Learning Solution</h2>
+                </div>
+                <div class="case-study-description">
+                  <p>
+                    <b>Project Overview:</b><br>
+                    I recently completed an end-to-end machine learning regression project aimed at predicting the condition of gas and water pipes based on various physical and environmental features. The primary objective was to build a predictive model that estimates pipe condition using factors such as Pipe Size, Diameter, Thickness, Material, Strength (MPa), Maximum Pressure (Bar), Material Loss Percentage, Thickness Loss (mm), and Temperature. This model can help utility and maintenance teams prioritize pipeline inspections and replacements, ultimately improving infrastructure management and reducing failure rates. <br>By leveraging regression algorithms and advanced feature engineering, the project demonstrates the practical application of machine learning in predictive maintenance and infrastructure resilience. <br><br>
+                    
+
+                    <b>Key Challenges:</b><br>
+                    A major challenge in this project was achieving high prediction accuracy using a regression model. Initially, using Logistic Regression yielded unsatisfactory results, as it is not designed for continuous target prediction. To address this, I implemented a series of advanced feature engineering techniques to better prepare the dataset for modeling, including: <br>
+                    <ul class="porject-overview-ul">
+                        <li>Applying the Yeo-Johnson transformation using PowerTransformer to normalize skewed feature distributions.</li>
+                        <li>Standardizing features using StandardScaler to ensure uniform scale across variables.</li>
+                        <li>Handling categorical variables carefully:
+                            <ul class="porject-overview-ul">
+                                <li>Using Ordinal Encoding for ordinal categorical features.</li>
+                                <li>Applying One-Hot Encoding for nominal (non-ordered) categorical variables.</li>
+                                <li>Applying Label Encoding for target variable</li>
+                            </ul>
+                        </li>
+                        <li>Building efficient preprocessing pipelines using ColumnTransformer and Pipeline from scikit-learn to automate and standardize all transformation steps.</li>
+                        <li>Designing an Excel-compatible workflow to facilitate scalability and future integration.</li>
+                    </ul> <br><br>
+                    
+
+                    <b>Approach & Implementation:</b><br>
+                    To implement the solution, I followed a structured machine learning workflow. I began with thorough Exploratory Data Analysis (EDA) to understand feature distributions, correlations, and potential data quality issues. I then constructed a robust feature engineering pipeline incorporating all necessary transformations and encodings. <br>
+
+                    Using scikit-learn’s pipelines and transformers, I ensured a smooth, reusable, and efficient data preprocessing architecture. After preparing the dataset, I trained a regression model that achieved 97.4% accuracy, validated using cross_val_score to confirm the model’s generalization performance. <br>
+
+                    Once satisfied with the model’s robustness, I saved it using pickle and deployed it in a production environment, enabling real-time predictions for pipe conditions. <br>
+
+                    This project significantly enhanced my practical skills in regression modeling, pipeline development, and production deployment. It showcased the power of machine learning in predictive maintenance and provided a valuable solution for improving infrastructure resilience and operational decision-making.
+                    <br><br>
+                    
+
+                    
+                  </p>
+                </div>
+                <div class="case-study-final-images">
+                    <div class="final-img">
+                        <img src="images/pipesense/1.png" alt="Final Design 1">
+                    </div>
+                    <div class="final-img">
+                        <img src="images/pipesense/2.png" alt="Final Design 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
         <!-- Easy StartUps  Case Study -->
         <div id="easystartups-template">
             <div class="case-study-banner">
