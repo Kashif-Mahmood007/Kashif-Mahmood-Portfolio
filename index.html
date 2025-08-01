@@ -823,6 +823,19 @@
                     </div>
                 </div>
 
+                <!-- Dimensionality Reduction - PCA item  -->
+
+                <div class="portfolio-item" data-category="Data-Science">
+                    <img src="images/Dimensionality Reduction - PCA/2.png" alt="">
+                    <div class="portfolio-info">
+                        <h3>Dimensionality Reduction Using PCA</h3>
+                        <p>This project applied Principal Component Analysis (PCA) to reduce the MNIST dataset’s 784 features to 250 while retaining over 90% variance. A K-Nearest Neighbors (KNN) classifier trained on...</p>
+                        <div class="portfolio-links">
+                            <a href="#" class=" case-study-btn" data-project="pca"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
 
                 <!-- PipeSense item  -->
 
@@ -833,6 +846,36 @@
                         <p>Developed a machine learning regression model to predict gas and water pipe conditions with 97.4% accuracy, enabling proactive maintenance through advanced feature engineering and robust pipelines...</p>
                         <div class="portfolio-links">
                             <a href="#" class=" case-study-btn" data-project="pipesense"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- EDA - Titanic Dataset  -->
+
+                <div class="portfolio-item" data-category="Data-Science">
+                    <img src="images/EDA - Titanic Dataset/2.png" alt="">
+                    <div class="portfolio-info">
+                        <h3>EDA - Titanic Dataset</h3>
+                        <p>This project involved performing in-depth Exploratory Data Analysis on the Titanic dataset using Python, uncovering key patterns related to passenger survival. Through univariate, bivariate, and...
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="#" class=" case-study-btn" data-project="eda-titanic"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- EDA - IPL Auction  -->
+
+                <div class="portfolio-item" data-category="Data-Science">
+                    <img src="images/EDA - IPL Auction/2.png" alt="">
+                    <div class="portfolio-info">
+                        <h3>EDA - IPL Auction</h3>
+                        <p>This project involved an in-depth exploratory data analysis of the IPL 2023 auction, focusing on player roles, valuations, team strategies, and retention dynamics. Key insights were drawn from visualizations...
+                        </p>
+                        <div class="portfolio-links">
+                            <a href="#" class=" case-study-btn" data-project="eda-ipl"><i class="fas fa-eye"></i> View Details</a>
                         </div>
                     </div>
                 </div>
@@ -1017,6 +1060,45 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- Demensionality Reduction - PCA Case Study -->
+
+         <div id="pca-template">
+            <div class="case-study-banner">
+                <img src="images/Dimensionality Reduction - PCA/main.png" alt="Dimensionality Reduction - PCA">
+            </div>
+            <div class="case-study-details">
+                <div class="case-study-header">
+                    <h2>Dimensionality Reduction Using PCA</h2>
+                </div>
+                <div class="case-study-description">
+                  <p>
+                    <b>Project Overview:</b><br>
+                    This project focused on applying Principal Component Analysis (PCA) for dimensionality reduction on the MNIST dataset, which contains over 40,000 grayscale images of handwritten digits, each represented by a 28x28 pixel grid flattened into 784 features. An initial machine learning model was trained using all 784 dimensions to establish a performance benchmark. The primary goal was to reduce the high-dimensional input space to a more computationally efficient form while retaining the most significant features necessary for accurate classification. This approach aimed to optimize both model performance and training efficiency by eliminating redundant and less informative features. <br><br>
+                    
+
+                    <b>Feature Reduction and Visualization:</b><br>
+                    To identify the optimal number of features for dimensionality reduction, the commonly used “90% variance retention” rule was applied, ensuring that the reduced dataset would still capture the vast majority of meaningful information. Through analysis of the explained variance ratio, it was determined that approximately 250 principal components were sufficient to preserve over 90% of the original data variance. The PCA algorithm was then used to project the original 784-dimensional data into this reduced 250-dimensional space. A K-Nearest Neighbors (KNN) classifier was subsequently trained on the transformed dataset, achieving an impressive accuracy of over 96%, nearly equivalent to the model trained on the full feature set. To better understand the structure of the data and its separability after dimensionality reduction, I visualized the transformed data using Plotly by projecting it into both 2D and 3D spaces. These interactive visualizations provided valuable insights into class distributions and clustering behavior post-PCA. <br><br>
+                    
+
+                    <b>Challenges and Insights:</b><br>
+                    One of the key challenges in this project was finding the right balance between dimensionality reduction and classification accuracy, ensuring that essential data characteristics were preserved while eliminating redundancy. The implementation, carried out using Python and scikit-learn, involved calculating and visualizing the explained variance to guide the selection of optimal principal components. After applying PCA, a KNN classifier was trained on the reduced dataset to assess performance. The results confirmed that significant dimensionality reduction could be achieved without degrading model accuracy, leading to faster training times and improved computational efficiency. This project enhanced my practical expertise in data preprocessing, dimensionality reduction techniques, interactive data visualization using Plotly, model evaluation, and developing scalable machine learning workflows. <br><br>
+                    
+
+                    
+                  </p>
+                </div>
+                <div class="case-study-final-images">
+                    <div class="final-img">
+                        <img src="images/Dimensionality Reduction - PCA/2.png" alt="Final Design 1">
+                    </div>
+                    <div class="final-img">
+                        <img src="images/Dimensionality Reduction - PCA/1.png" alt="Final Design 2">
+                    </div>
+                </div>
+            </div>
+        </div>
     
 
 
@@ -1078,6 +1160,80 @@
             </div>
         </div>
     
+
+        
+        <!-- EDA - Titanic Dataset  Case Study -->
+        <div id="eda-titanic-template">
+            <div class="case-study-banner">
+                <img src="images/EDA - Titanic Dataset/main.png" alt="Modern Theme Banner">
+            </div>
+            <div class="case-study-details">
+                <div class="case-study-header">
+                    <h2>EDA - Titanic Dataset</h2>
+                </div>
+                <div class="case-study-description">
+                  <p>
+                    <b>Project Overview:</b><br>
+                    This project focused on performing a detailed Exploratory Data Analysis (EDA) on the Titanic dataset to identify key patterns and relationships that may have influenced passenger survival. The dataset, widely used in the data science community, contains rich information on passengers, such as age, gender, class, fare paid, and survival status. The goal was to explore the data across multiple analytical levels: univariate analysis to understand the distribution of individual features, bivariate analysis to explore relationships between pairs of variables, and multivariate analysis to observe how multiple factors interacted simultaneously. This comprehensive exploration helped in detecting outliers, managing missing values, and deriving meaningful insights that lay the groundwork for future predictive modeling and hypothesis generation.<br><br>
+                    
+                    <b>Analytical Techniques and Visualizations:</b><br>
+                    The univariate analysis focused on examining individual features such as age, fare, and survival count to understand their distributions and detect outliers or skewed values. Visualization tools like KDE plots, histograms, and boxplots were used to gain clear insights into the underlying structure of each variable. In the bivariate and multivariate analyses, relationships between variables, such as the impact of age, passenger class, gender, and fare on survival, were explored using scatterplots, pairplots, grouped boxplots, line charts, and correlation heatmaps. The correlation heatmap and seaborn clustermap, in particular, provided a high-level view of how features were interrelated, highlighting patterns of multicollinearity. These visual explorations uncovered critical insights, including notably higher survival rates among women and first-class passengers, emphasizing the value of visual EDA in understanding real-world data. <br><br>
+                    
+                    <b>Implementation and Key Insights:</b><br>
+                    The analysis was carried out using Python, leveraging powerful libraries such as pandas for data manipulation, seaborn and matplotlib for visualization, and NumPy for numerical operations. The process involved thorough data cleaning, including handling missing values, treating outliers, and addressing skewed distributions to ensure the integrity of the analysis. One of the key challenges was maintaining both visual clarity and statistical accuracy while presenting complex relationships between features. Multivariate visualizations, especially heatmaps and pairplots, provided a comprehensive understanding of how different variables interacted to influence survival outcomes. This project significantly enhanced my proficiency in data wrangling, statistical analysis, and visual storytelling, establishing a solid analytical foundation for building robust machine learning models in future projects. <br><br>
+                    
+
+                  </p>
+                </div>
+            
+                <div class="case-study-final-images">
+                    <div class="final-img">
+                        <img src="images/EDA - Titanic Dataset/2.png" alt="Final Design 1">
+                    </div>
+                    <div class="final-img">
+                        <img src="images/EDA - Titanic Dataset/1.png" alt="Final Design 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- EDA - IPL Auction  Case Study -->
+        <div id="eda-ipl-template">
+            <div class="case-study-banner">
+                <img src="images/EDA - IPL Auction/main.png" alt="Modern Theme Banner">
+            </div>
+            <div class="case-study-details">
+                <div class="case-study-header">
+                    <h2>EDA - IPL Auction</h2>
+                </div>
+                <div class="case-study-description">
+                  <p>
+                    <b>Project Overview:</b><br>
+                    This project focused on conducting an in-depth analysis of the IPL 2023 auction dataset, which included detailed attributes such as player roles, nationalities, base prices, final bid amounts, team affiliations, and retention statuses. The goal was to perform structured exploratory data analysis (EDA) to uncover meaningful trends in player valuation, franchise spending behavior, and auction outcomes. By categorizing players into roles batsmen, bowlers, all-rounders, and wicket-keepers, the project sought to understand how teams strategized their purchases and how specific player profiles influenced bidding decisions.<br><br>
+                    
+                    <b>Key Insights and Visual Analysis:</b><br>
+                    The analysis yielded valuable insights across several dimensions, including retention trends, the distribution of sold vs. unsold players, and total expenditure per franchise. Visual tools such as bar charts and pie charts were used to illustrate player distribution by team and role, while heatmaps highlighted the relationships between player categories and their auction prices. Distribution plots showcased the spread of final selling prices, identifying clusters and outliers. The study also spotlighted high-profile players, such as the most expensive batsmen, bowlers, and all-rounders, providing a clear picture of how franchises prioritized their budgets and identified perceived value. <br><br>
+                    
+                    <b>Technical Implementation and Outcomes:</b><br>
+                    Implemented using Python, the project leveraged powerful libraries like pandas for data wrangling and seaborn and matplotlib for visualization. The workflow involved extensive data cleaning, resolving categorical inconsistencies, and transforming mixed-type features for seamless analysis. A notable challenge was accurately distinguishing between retained and newly auctioned players, which was crucial for drawing valid conclusions. The project revealed how franchise strategies varied significantly, how role and nationality impacted bidding trends, and how some players attracted premium prices. It ultimately sharpened my skills in data interpretation, visualization, and sports analytics, establishing a strong foundation for future projects involving predictive modeling or strategic forecasting in competitive domains. <br><br>
+                    
+
+                  </p>
+                </div>
+            
+                <div class="case-study-final-images">
+                    <div class="final-img">
+                        <img src="images/EDA - IPL Auction/2.png" alt="Final Design 1">
+                    </div>
+                    <div class="final-img">
+                        <img src="images/EDA - IPL Auction/1.png" alt="Final Design 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
         <!-- Easy StartUps  Case Study -->
         <div id="easystartups-template">
@@ -1162,6 +1318,7 @@
                
                 <div class="case-study-description">
                 <p>
+                    <b>Project Overview:</b><br>
                     This project involved extracting over 24,000 structured vehicle listings data from a local automotive platform using Python and BeautifulSoup. The goal was to collect and organize real-world data for potential use in market analysis and machine learning applications. Key attributes extracted included Model Name, Price, Mileage, Fuel Type, Location, Transmission Type, and Engine Capacity. The cleaned and well-structured dataset was exported as a CSV file, ready for further analysis and visualization. This project showcases the practical use of web scraping and data engineering in building valuable automotive datasets. <br><br>
 
                     <b>Key Challenges:</b><br>
