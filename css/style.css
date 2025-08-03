@@ -63,6 +63,7 @@ a {
     color: var(--primary);
     margin-top: 10px;
     margin-left: 3px;
+    margin-bottom: 10px;
 }
 
 .btn-outline:hover {
