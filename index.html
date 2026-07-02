@@ -932,6 +932,19 @@
                     </div>
                 </div>
 
+                
+                <!-- Image Dataset Cropper  -->
+
+                <div class="portfolio-item" data-category="Data-Science">
+                    <img src="images/image-dataset-cropper/1.png" alt="">
+                    <div class="portfolio-info">
+                        <h3>Image Dataset Cropper</h3>
+                        <p>Peanut Dataset Image Cropper is a full-stack, locally-hosted web application built to solve a real bottleneck in machine learning dataset preparation: efficiently extracting multiple individual images...</p>
+                        <div class="portfolio-links">
+                            <a href="#" class=" case-study-btn" data-project="image-dataset-cropper"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- EDA - Titanic Dataset  -->
 
@@ -1280,7 +1293,43 @@
                 </div>
             </div>
         </div>
-    
+
+
+
+        <!-- Image Dataset Cropper -->
+        <div id="image-dataset-cropper-template">
+            <div class="case-study-banner">
+                <img src="images/image-dataset-cropper/main.png" alt="Modern Theme Banner">
+            </div>
+            <div class="case-study-details">
+                <div class="case-study-header">
+                    <h2>Image Dataset Cropper</h2>
+                </div>
+                <div class="case-study-description">
+                  <p>
+                    <b>Project Overview:</b><br>
+                    Peanut Dataset Image Cropper is a full-stack, locally-hosted web application built to solve a real bottleneck in machine learning dataset preparation: efficiently extracting multiple individual images from composite photo frames at scale. The project emerged from a practical need — a dataset of approximately 2,000 peanut images (~8 GB), where each raw photograph contained a 2×2 grid of subjects that needed to be separated into individual ML-ready files. Rather than relying on cloud-based tools that impose file size limits, raise data privacy concerns, and lack batch capabilities, I designed and built a custom solution from the ground up using Python 3.11, FastAPI, Pillow, React 18, and Vite. The result is a three-panel browser interface — folder tree, image grid, and crop controls — that runs entirely on the local machine and processes datasets of any size without a single byte leaving the user's PC.<br><br>
+                    
+                    <b>Custom Multi-Region Cropping System:</b><br>
+                    The application's defining technical feature is a custom HTML5 Canvas multi-region crop editor built without any third-party crop library. A user can draw unlimited numbered rectangular regions on a single image simultaneously, with full drag, resize, and delete interactions on each region — mirroring the workflow of tools like AutoCropper.io but running locally. When the user clicks Save, all regions are sent to the backend in a single API call, and each crop is processed sequentially: extracted from the original image at pixel-perfect coordinates (using a precise scale conversion from CSS display dimensions to original image pixels), resized to an exact output resolution (224×224, 320×320, or custom) via LANCZOS resampling, and saved alongside the original as filename_1.jpg, filename_2.jpg, and so on — with a collision-safe naming system that scans existing files to prevent any overwriting. The same crop layout can then be batch-applied to every original image in a folder with one click, making large-scale dataset preparation a matter of minutes rather than days. <br><br>
+                    
+                    <b>Performance, Scalability, and Memory Optimization:</b><br>
+                    Memory efficiency was a first-class design constraint throughout. On the backend, file uploads are streamed in 1 MB chunks using aiofiles, PIL image objects are deleted immediately after use inside finally blocks, batch processing is strictly sequential (never parallel), and ZIP exports use a generator-based streaming approach so a multi-gigabyte archive is never held in RAM. On the frontend, full-size images are loaded as Blob URLs and revoked on every navigation to prevent browser memory leaks, while the image grid serves only 200px thumbnails from a server-side disk cache — meaning repeated folder views are near-instant and require no image processing at all. The project demonstrates end-to-end engineering ownership: system architecture, RESTful API design, image processing pipeline, custom React hook development, and production-quality memory management across both the Python backend and JavaScript frontend.<br><br>
+                    
+
+                  </p>
+                </div>
+            
+                <div class="case-study-final-images">
+                    <div class="final-img">
+                        <img src="images/image-dataset-cropper/2.png" alt="Final Design 1">
+                    </div>
+                    <div class="final-img">
+                        <img src="images/image-dataset-cropper/1.png" alt="Final Design 2">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         
         <!-- EDA - Titanic Dataset  Case Study -->
