@@ -879,6 +879,19 @@
                     </div>
                 </div>
 
+                <!-- AQI Predictor item  -->
+
+                <div class="portfolio-item" data-category="Data-Science">
+                    <img src="images/AQI Prediction/1.png" alt="">
+                    <div class="portfolio-info">
+                        <h3>AQI Prediction System</h3>
+                        <p>An end-to-end automated machine learning pipeline designed to forecast Air Quality Index (AQI) 72 hours ahead by leveraging real-time data, and multi-output regression with full CI/CD automation...</p>
+                        <div class="portfolio-links">
+                            <a href="#" class=" case-study-btn" data-project="AQI-prediction"><i class="fas fa-eye"></i> View Details</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Employee Retention Predictor item  -->
 
                 <div class="portfolio-item" data-category="Data-Science">
@@ -1086,6 +1099,45 @@
                     </div>
                     <div class="final-img">
                         <img src="images/peanutinfo/2.png" alt="Final Design 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- AQI Prediction Case Study -->
+
+         <div id="AQI-prediction-template">
+            <div class="case-study-banner">
+                <img src="images/AQI Prediction/main.png" alt="AQI Prediction Banner">
+            </div>
+            <div class="case-study-details">
+                <div class="case-study-header">
+                    <h2>AQI Prediction System - A Machine Learning Solution</h2>
+                </div>
+                <div class="case-study-description">
+                  <p>
+                    <b>Project Overview:</b><br>
+                    Air pollution remains one of the most pressing environmental challenges of our time, with real-time and predictive air quality information being critical for public health, urban planning, and policy decisions. During my internship at 10Pearls, I developed a fully automated, end-to-end Air Quality Index (AQI) Forecasting System specifically targeting the NED University region of Karachi — one of Pakistan's most densely populated and industrially active urban zones. The system is designed to forecast AQI values for the next 72 hours, providing actionable environmental intelligence with minimal latency. By combining robust data engineering, advanced machine learning, and modern MLOps practices, this project bridges the gap between raw environmental sensor data and meaningful, accessible predictions that can support citizens, researchers, and environmental agencies alike.<br><br>
+                    
+
+                    <b>System Architecture and Machine Learning Pipeline:</b><br>
+                    The technical foundation of this project is built on a carefully engineered, multi-stage machine learning pipeline. Hourly AQI observations are ingested automatically from the World Air Quality Index (WAQI) API through a dedicated GitHub Actions workflow that runs every hour, continuously appending fresh data to a growing historical dataset. The preprocessing stage involves thorough data quality checks, datetime parsing, correlation analysis, and IQR-based outlier removal across key environmental features including temperature, humidity, PM1, PM10, and AQI. Extensive feature engineering follows, encompassing timestamp decomposition, lag features spanning 1 to 72 hours, cyclical sine/cosine encodings for hour and day-of-week to preserve temporal circularity, and rolling statistical aggregates across multiple windows. All engineered and scaled features are then uploaded to the Hopsworks Feature Store for centralized, reproducible feature management. For model development, four candidate algorithms — XGBoost, Support Vector Regression, Random Forest, and Gradient Boosting — were systematically evaluated and fine-tuned using GridSearchCV with 5-fold cross-validation, with R², MSE, and MAE serving as primary evaluation metrics. The best-performing base model was subsequently wrapped in a MultiOutputRegressor to enable direct 72-hour multi-step forecasting in a single inference call, with both model artifacts registered in the Hopsworks Model Registry for versioned, production-ready deployment.<br><br>
+                    
+
+                    <b>Automation, Deployment, and Impact:</b><br>
+                    A defining strength of this project is its fully autonomous operational lifecycle, implemented through a dual GitHub Actions CI/CD pipeline. The first workflow handles hourly data ingestion, while the second executes a comprehensive daily retraining cycle — pulling the latest dataset, re-running feature engineering, refreshing the Hopsworks Feature Store, retraining and evaluating all candidate models, and re-registering the updated model artifacts — all without any manual intervention. This design ensures the system continuously adapts to evolving air quality patterns and remains production-ready at all times. A user-facing Streamlit application serves as the frontend interface, presenting predicted AQI values alongside interactive 72-hour trend visualizations in an intuitive and accessible format. Beyond its technical contributions, this project delivered substantial professional growth, offering hands-on experience with the complete spectrum of a real-world ML system — from raw API ingestion and feature stores to hyperparameter tuning, multi-output forecasting, and automated retraining pipelines. It stands as a testament to how modern data science and MLOps practices can be meaningfully applied to environmental challenges with direct societal relevance.<br><br>
+                    
+
+                    
+                  </p>
+                </div>
+                <div class="case-study-final-images">
+                    <div class="final-img">
+                        <img src="images/AQI Prediction/1.png" alt="Final Design 1">
+                    </div>
+                    <div class="final-img">
+                        <img src="images/AQI Prediction/2.png" alt="Final Design 2">
                     </div>
                 </div>
             </div>
