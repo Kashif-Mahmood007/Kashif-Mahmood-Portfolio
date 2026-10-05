@@ -1260,7 +1260,7 @@
           <p class="pub-summary">This study asks which pretraining approach is actually safest to deploy for chest X-ray
             diagnosis when labeled data is scarce and scanners vary, rather than just which one scores highest.</p>
           <ul class="pub-list">
-            <li>Compared six (a contrastive and a reconstruction-based self-supervised models with five supervised baselines) on a
+            <li>Compared six (a contrastive and reconstruction-based self-supervised models with five supervised baselines) on a
               17,988-image, six-class chest X-ray benchmark across 10%, 20%, and 100% annotation budgets.</li>
             <li>Achieved macro F1 = 0.952 with SimCLR + ResNet-50, statistically comparable to the fully supervised ceiling while retaining 88.8% of full-label performance at only 10% annotation; MAE + ViT-S/16 showed the strongest robustness to synthetic perturbations and the lowest overconfidence under calibration testing</li>
             <li>Introduced a Deployment Risk Score (DRS) framework translating these accuracy, robustness, and calibration trade-offs into scenario-specific model-selection guidance for clinical deployment.</li>
