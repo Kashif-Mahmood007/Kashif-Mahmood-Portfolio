@@ -1120,7 +1120,7 @@
         <span class="eyebrow">Aspiring AI/ML researcher</span>
         <h1>Kashif Mahmood</h1>
         <p class="role-line">AI/ML researcher · data scientist · software engineer</p>
-        <p class="bio">Software engineering graduate building a research career in computer vision, self-supervised learning, and explainable AI, with three manuscripts under review and an original, published dataset. Alongside this research, I've built production ML systems in industry, including an automated air-quality forecasting pipeline and a churn-prediction model that measurably improved customer retention. I'm currently a research assistant at the University of Sargodha, working toward a Master's in AI, machine learning, or data science.</p>
+        <p class="bio">Software engineering graduate building a research career in computer vision, self-supervised learning, and explainable AI, with three manuscripts in revision or under review and an original, published dataset. Alongside this research, I've built production ML systems in industry, including an automated air-quality forecasting pipeline and a churn-prediction model that measurably improved customer retention. I'm currently a research assistant at the University of Sargodha, working toward a Master's in AI, machine learning, or data science.</p>
         <div class="hero-ctas">
           <a href="#research" class="btn btn-accent">Explore research</a>
           <a href="#portfolio" class="btn">View projects</a>
@@ -1248,7 +1248,7 @@
             <a class="pub-title"
               href="https://drive.google.com/file/d/1M93EiMgqcNUlLpl7MZIzZvqwxD_R-Qph/view?usp=sharing" target="_blank"
               rel="noopener">A Deployment Risk Score Framework for Self-Supervised Chest X-Ray Classification:
-              Calibrated Multi-Objective Evaluation Under Annotation Scarcity and Scanner Heterogeneity</a>
+              Calibrated Multi-Objective Evaluation Under Annotation Scarcity and Distribution Shift</a>
             <span class="badge badge-warn">In revision</span>
           </div>
           <div class="pub-meta">
@@ -1258,12 +1258,11 @@
             <!-- <div class="pub-vol">Volume/issue pending</div> -->
           </div>
           <p class="pub-summary">This study asks which pretraining approach is actually safest to deploy for chest X-ray
-            diagnosis when labeled data is scarce and scanners vary, rather than just which one scores highest.</p>
+            diagnosis when labeled data is scarce and the data shifts, rather than just which one scores highest.</p>
           <ul class="pub-list">
-            <li>Compared six (a contrastive and reconstruction-based self-supervised models with five supervised baselines) on a
-              17,988-image, six-class chest X-ray benchmark across 10%, 20%, and 100% annotation budgets.</li>
-            <li>Achieved macro F1 = 0.952 with SimCLR + ResNet-50, statistically comparable to the fully supervised ceiling while retaining 88.8% of full-label performance at only 10% annotation; MAE + ViT-S/16 showed the strongest robustness to synthetic perturbations and the lowest overconfidence under calibration testing</li>
-            <li>Introduced a Deployment Risk Score (DRS) framework translating these accuracy, robustness, and calibration trade-offs into scenario-specific model-selection guidance for clinical deployment.</li>
+            <li>Compared seven models (SimCLR + ResNet-50 and MAE + ViT-S/16 self-supervised pretraining, and five supervised baselines including an architecture-matched ViT-S/16 trained from scratch) on a 17,988-image, six-class chest X-ray benchmark at 10%, 20%, and 100% annotation budgets, over three seeds.</li>
+            <li>SimCLR + ResNet-50 reached macro F1 = 0.952 and retained 88.8% of full-label performance with 10% of the labels, a result confirmed when pretraining was restricted to the training split. The from-scratch ViT-S/16 control showed that MAE's corruption robustness and low overconfidence come mainly from the ViT architecture rather than from MAE pretraining.</li>
+            <li>Proposed a Deployment Risk Score (DRS) that turns accuracy and robustness to eight synthetic perturbations into scenario-specific model choices, reported with calibration, cross-dataset transfer to ChestMNIST, weight-sensitivity analysis, and dataset leakage audits.</li>
           </ul>
           <div class="pub-foot"><span>Lead author</span><span>In Collaboration with the Authors of Princess Nourah bint
               Abdulrahman University</span></div>
@@ -1281,12 +1280,12 @@
             <div class="pub-venue">Scientific Reports · 2026 · Nature Portfolio</div>
             <!-- <div class="pub-vol">Volume/issue pending</div> -->
           </div>
-          <p class="pub-summary">After EfficientNet and ConvNeXt variants fell short of state-of-the-art, I built a
-            ResNet-50 transfer-learning approach with augmentation, a OneCycleLR schedule, and weighted loss to handle
+          <p class="pub-summary">After comparing EfficientNet-B0, EfficientNet-B4 and ConvNeXt-Base with ResNet-50, I improved
+            a ResNet-50 transfer-learning model with augmentation, a OneCycleLR schedule, and a weighted loss for
             class imbalance.</p>
           <ul class="pub-list">
             <li>Achieved 97.28% accuracy on a 1,720-image benchmark of healthy and diseased groundnut leaf images, surpassing the previous best published result of 96.51% on the same dataset.</li>
-            <li>Established a new baseline for automated groundnut leaf disease detection, demonstrating the feasibility of AI-based tools for sustainable agricultural practice.</li>
+            <li>Addressed class imbalance and small-data training on a five-class leaf dataset, with the full pipeline and results reported in a public preprint.</li>
           </ul>
           <div class="pub-foot"><span>Lead author</span><span>In Collaboration with the Authors of Islamic University of
               Madinah</span></div>
@@ -1310,7 +1309,7 @@
             recognition.</p>
           <ul class="pub-list">
             <li>Compared benchmark datasets and evaluation metrics across the literature, identifying dataset scale, model complexity, and field adaptability as the primary open challenges.</li>
-            <li>Proposed future research directions, including lightweight visual models, multi-task integrated systems, and soilpenetrating sensing technologies.</li>
+            <li>Proposed future research directions, including lightweight visual models, multi-task integrated systems, and soil-penetrating sensing technologies.</li>
           </ul>
           <div class="pub-foot"><span>Corresponding author</span><span>In Collaboration with the Authors of University
               of Sargodha</span></div>
@@ -1359,7 +1358,7 @@
             </tr>
             <tr>
               <td>Baseline</td>
-              <td>ViT-B/16 reaches macro-F1 of 0.9822 on the standard test split</td>
+              <td>Five models over five seeds. ViT-B/16 reaches a mean macro-F1 of 0.977 (best seed 0.982) on the standard split, but drops by 22.3% on unseen backgrounds and 17.4% on unseen lighting</td>
             </tr>
             <tr>
               <td>Documentation</td>
@@ -1435,8 +1434,7 @@
           <div class="tl-org">University of Sargodha, under Dr. Muhammad Ramzan</div>
           <ul class="tl-list divider">
             <li>Served as lead or co-author on three research manuscripts spanning agricultural and medical imaging AI,
-              including a selfsupervised learning framework for chest X-ray classification and a transfer-learning
-              approach to peanut disease detection both at Scientific Reports.</li>
+              including a deployment-focused evaluation of self-supervised learning for chest X-ray classification and a             transfer-learning approach to peanut disease detection, both at Scientific Reports.</li>
             <li>Independently conceived, built, and documented a public image dataset of 8,944 peanut images, including
               custom-built data-preparation software.</li>
             <li>Conducted literature reviews, experimental design, and model development across deep learning and
@@ -1730,7 +1728,7 @@
       {
         id: 'peanutinfo', cat: 'research', Short_title: 'PeanutInfo', long_title: 'PeanutInfo – Deep Learning Solution', badge: 'Research project', img: 'images/peanutinfo/1.png', banner: 'images/peanutinfo/main.png', img2: 'images/peanutinfo/2.png',
         short: 'PeanutInfo is a deep learning based system that accurately classifies peanut varieties, detects pests, and identifies diseases for smarter crop management through a user-friendly web interface...',
-        body: '<p><strong>Project Overview:</strong> To tackle the increasing challenges faced in peanut agriculture, particularly in areas such as variety classification, disease diagnosis, and pest identification, I developed a comprehensive and intelligent image classification system dedicated to peanut crop analysis. This innovative solution is designed to support farmers, agricultural researchers, and agritech platforms by providing accurate and reliable identification of peanut types, harmful pests, and plant diseases. By integrating state-of-the-art deep learning techniques and advanced image processing methods, the system aims to revolutionize traditional agricultural practices, enhance decision-making, and ultimately contribute to healthier crop management and improved yields.</p>\n      <p><strong>Functional Modules:</strong> The project is strategically structured into three core modules, each addressing a specific aspect of peanut crop analysis. The Peanut Classification module focuses on identifying and categorizing different types of peanuts based on distinct visual characteristics, assisting in quality control and variety management. The Peanut Pest Identification module is designed to detect and classify various pests that pose threats to peanut crops, enabling early intervention and minimizing potential damage. Meanwhile, the Peanut Disease Detection module specializes in diagnosing common diseases in peanut plants through detailed analysis of leaf and crop imagery, supporting timely and accurate treatment decisions. To integrate these functionalities into a cohesive system, we utilized two publicly available datasets for the Peanut Pest Identification and Peanut Disease Detection modules. For the Peanut Classification module, we developed a custom dataset from scratch, capturing and curating images of various peanut types.</p>\n      <p><strong>Advanced Deep Learning Algorithms:</strong> The core of this project is built on advanced deep learning techniques and meticulous data engineering. To achieve high accuracy across all modules, I initially employed several state-of-the-art pretrained models, including ResNet-50 and EfficientNet-B0 and B4. However, these models did not consistently reach the desired accuracy threshold of beyond 98%. To overcome this, I leveraged more advanced architectures that combine convolutional neural networks with the cutting-edge transformer concept—specifically, the ConvNeXt variants (Tiny, Small, and Base). These models not only delivered state-of-the-art performance but also set a new benchmark in accuracy and robustness for peanut crop classification, pest detection, and disease identification.</p>\n      <p><strong>User Interface and System Deployment:</strong> A fully integrated web interface was developed to provide a seamless and engaging user experience. The frontend, built with HTML, CSS, Bootstrap, and JavaScript, ensures a responsive and visually intuitive design that performs smoothly across all devices. On the backend, PHP and MySQL power robust user management and efficient data handling, maintaining reliability and security. To bridge the deep learning models with the platform, a custom Flask API was implemented, enabling dynamic, real-time predictions from user-uploaded images. This architecture not only guarantees fast and accurate responses but also supports scalability and future enhancements with ease.</p>\n      <p><strong>Academic Impact and Recognition:</strong> This capstone project laid the groundwork for my later published research on peanut disease detection under Dr. Muhammad Ramzan, where I refined the approach into a more rigorous, publishable study.</p>',
+        body: '<p><strong>Project Overview:</strong> PeanutInfo is my final year project (BS Software Engineering, University of Sargodha), built with teammates Nabeel Abbas and Ume Habiba under the supervision of Dr. Muhammad Ramzan. It is a web application that analyses peanut images with deep learning: a user uploads a photo and receives a prediction, a confidence score and a short description with management advice.</p>\n      <p><strong>Functional Modules:</strong> The system has three modules. Variety Classification identifies peanut varieties from pod images, using a dataset our team collected. Pest Identification recognises five pests (aphids, armyworm, caterpillar, thrips and wireworm), using images from the public IP102 dataset extended with two more classes. Disease Detection classifies groundnut leaf images into five conditions, using a public 1,720-image dataset. When a prediction is not confident enough, the system answers "Unknown" instead of forcing a label.</p>\n      <p><strong>Models and Results:</strong> We compared ImageNet-pretrained CNNs, including ResNet-50, EfficientNet-B0/B4 and ConvNeXt models. ResNet-50 with transfer learning gave the best result, 98.37% accuracy on disease detection. The five-class pest module reached 91.94% accuracy.</p>\n      <p><strong>System Deployment:</strong> The frontend uses HTML, CSS, Bootstrap and JavaScript; PHP and MySQL handle user accounts and the contact form; and a Flask API serves the trained PyTorch models for real-time predictions on uploaded images.</p>\n      <p><strong>What Came Next:</strong> The disease-detection part of this project was the starting point for my peanut disease detection manuscript with Dr. Muhammad Ramzan, now under review at Scientific Reports, where I redid the experiments as a separate study and report 97.28% accuracy.</p>',
         repo: 'https://github.com/Kashif-Mahmood007/PeanutInfo-Deep-Learning'
       },
       {
